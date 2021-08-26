@@ -1,0 +1,25 @@
+Chat Widget
+
+Social chat widget instant support system. it is a directly connection with customers looking for help. 
+it is a complete solution to provide chat support to your valuble cutomer. 
+This is a easy way to directly plug in your website.
+
+Features
+- 100% Responsive Layout
+- Bootstrap 4 
+- jQuery v3.4.1
+- Clean Design and Code
+- Easy to Customize
+- Easy to use
+
+Sources and Credits
+I’ve used the following: Thanks so much to
+Fontawsome icon: Free Font Awesome 5
+Framework: Bootstrap 4
+jQuery: Javascript
+
+<!-- Start Script Webchat -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery/jquery-ui.js"></script>
+<script src="script/widget.js" type="text/javascript"></script>
+<!-- End Script Webchat -->

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Chat Apps</title>
+
+<!-- STYLE -->
+<link rel="stylesheet" href="dist/css/bootstrap.css">
+<link rel="stylesheet" href="dist/css/custome.css">
+<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="plugins/rating/star-rating-svg.css">
+
+  
+</head>
+
+<body style="overflow:hidden;">
+
+	<div class="col-md-12 ma-0 pa-0">
+		<!-- DIRECT CHAT -->
+		<div class="card card-warning direct-chat direct-chat-custom" >
+			<div class="card-header">
+				<h5 class="card-title text-info"><i class="fas fa-comments"></i> Widget Chat</h5>
+				<div class="card-tools">
+				  <div class="btn-group">
+					<button type="button" class="btn btn-tool dropdown-toggle text-info" data-toggle="dropdown">
+						<i class="fas fa-user-cog"></i>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right" role="menu">
+						<a href="#" class="dropdown-item text-info" data-toggle="modal" data-target="#modal-profile">
+							<i class="fas fa-user-circle"></i> Profile</a>
+						<a href="#" class="dropdown-item text-info" data-toggle="modal" data-target="#modal-endchat">
+							<i class="fas fa-window-close text-danger"></i> End Chat</a>
+					</div>
+				  </div>
+				</div>
+			</div>
+		  
+			<div class="card-body">
+				<!-- Conversations are loaded here -->
+				<div class="contain-chat">
+					<div class="direct-chat-messages">
+						<div class='direct-chat-msg right'>
+							<img class='direct-chat-img' src='dist/img/user.jpg' alt='message user image'>
+							<div class='direct-chat-text'>
+								<div class='direct-chat-infos'>
+									<span class='direct-chat-name float-right'>Red Bionic</span>
+									<span class='direct-chat-timestamp float-left'>12 May 2021 09:19 PM</span>
+								</div><br/>
+								<p>hello..</p>
+							</div>
+						</div>
+						<div class='direct-chat-msg'>
+							<img class='direct-chat-img' src='dist/img/agent.png' alt='message user image'>
+							<div class='direct-chat-text'>
+								<div class='direct-chat-infos'>
+									<span class='direct-chat-name float-left'>Eric (Agent)</span>
+									<span class='direct-chat-timestamp float-right'>12 May 2021 09:33 PM</span>
+								</div><br/>
+								<p>Hi Red, welcome to join chat..</p> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/.direct-chat-messages-->
+
+			</div>
+			<!-- /.card-body -->
+		  
+			<div class="card-footer">
+				<div class="input-group">
+				  <input type="text" id="message" data-emojiable="true" class="form-control form-control-sm" placeholder="Type Message ...">
+
+				  <div class="input-group-prepend">
+					<input type="file" id="FileAttach" class="hide">
+					<button type="button" class="btn btn-info btn-sm" id="btn_attachment" onclick="document.querySelector('#FileAttach').click()">
+						<i class="fas fa-paperclip"></i>
+					</button>
+				  </div>
+				  <div class="input-group-append">
+					<button type="button" id="BtnSend" class="btn btn-info btn-sm"><i class="fas fa-paper-plane"></i></button>
+				  </div>
+				</div>
+			</div>
+			<!-- /.card-footer-->
+		  
+		</div>
+		<!--/.direct-chat -->
+	</div>
+	<!-- /.col -->
+	
+	 
+	<!-- modal End Chat -->
+	<div class="modal fade" id="modal-endchat">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-body">
+			  <p><center>Are you sure end this conversations?</center></p>
+			</div>
+			<div class="modal-footer justify-content-between">
+			  <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+			  <a href="feedback.html" type="button" class="btn btn-sm btn-danger">End Chat</a>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<!--/ modal End Chat -->
+
+	<!-- modal profile user -->
+	<div class="modal fade" id="modal-profile">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header bg-warning">
+              <h4 class="modal-title text-info"><i class="fas fa-user-circle"></i> Profile</h4>
+              <button type="button" class="close text-info" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+            </div>
+			<div class="modal-body">
+			  <div class="card-body table-responsive p-0">
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <td>Name</td>
+                      <td><b><span>Red Bionic</span></b></td>
+                    </tr>
+					<tr>
+                      <td>Email</td>
+                      <td><span>redbionic@mail.com</span></td>
+                    </tr>
+				  </tbody>
+				</table>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<!-- /modal profile user -->
+
+
+
+<!-- REQUIRED SCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap.js"></script>
+<script src="plugins/jquery/parsley.js"></script>
+
+<script>
+	$(function() {
+	  	$(".my-rating").starRating({
+			totalStars: 5,
+			starShape: 'rounded',
+			starSize: 40,
+			emptyColor: 'lightgray',
+			hoverColor: 'orange',
+			activeColor: 'orange',
+			ratedColors: 'orange',
+			useGradient: false,
+			callback: function(currentRating, $el){
+				$("#my_rating").attr("data-rating", currentRating);
+			}
+	  	});
+
+	});
+</script>
+<script src="plugins/rating/jquery.star-rating-svg.js"></script>
+
+
+
+</body>
+</html>

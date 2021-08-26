@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Widget Chat</title>
+
+  <!-- STYLE -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/rating/star-rating-svg.css">
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
+  <link rel="stylesheet" href="dist/css/custome.css">
+</head>
+
+<body style="overflow:hidden;">
+
+	<div class="col-md-12 ma-0 pa-0">
+		<!-- DIRECT CHAT -->
+		<div class="card card-warning direct-chat direct-chat-custom" >
+			<div class="card-header">
+				<h5 class="card-title text-info"><i class="fas fa-comments"></i> Widget Chat</h5>
+			</div>
+		  
+			<div class="card-body">
+				<!-- Login form -->
+				<form class="login-form" >
+					<p class="login-box-msg"><h5>Welcome to WidgetChat.</h5> Please input your details in order to connect with us.</p>
+			
+					<div class="form-group">
+						<label>Name :</label>
+						<input type="text" class="form-control float-right" id="name" placeholder="Your Name" required="" data-parsley-trigger="change">
+					</div>
+					<div class="form-group"><div class="input-group"></div></div>
+					
+					<div class="form-group">
+						<label>Email :</label>
+						<input type="email" class="form-control float-right" id="email" placeholder="Your Email" required="" data-parsley-trigger="change">
+					</div>
+					<div class="form-group"><div class="input-group"></div></div>
+					<div class="form-group">
+					  <div class="row">
+						  <div class="col-6"></div>
+						  <div class="col-6">
+							<a href="form_chat.html" type="button" id="BtnStart" class="btn btn-info btn-sm btn-block">
+								<i class="fas fa-sign-in-alt"></i> Start Chat
+							</a>
+						  </div>
+						</div>
+					</div>
+				</form>
+				<!-- end Login form -->
+
+
+
+			</div>
+			<!-- /.card-body -->
+		  
+		</div>
+		<!--/.direct-chat -->
+	</div>
+	<!-- /.col -->
+	
+	
+
+<!-- REQUIRED SCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap.js"></script>
+<script src="plugins/jquery/parsley.js"></script>
+
+</body>
+</html>
